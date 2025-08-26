@@ -69,7 +69,10 @@ function LoginPage() {
             Playlifts
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Transfer your music playlists between YouTube Music and Spotify seamlessly
+            Transfer your music playlists between YouTube Music and Spotify seamlessly. 
+            <br />
+            Simply connect your accounts and we'll handle the technical work of matching songs and 
+            moving them to the destination platform.
           </p>
         </div>
 
