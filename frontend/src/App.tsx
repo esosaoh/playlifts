@@ -76,20 +76,6 @@ function LoginPage() {
           </p>
         </div>
 
-        <div className="flex justify-center mb-4">
-          <button
-            aria-label="Toggle theme"
-            onClick={() => setDark((d) => !d)}
-            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow"
-          >
-            {dark ? (
-              <SunIcon className="w-6 h-6 text-yellow-400" />
-            ) : (
-              <MoonIcon className="w-6 h-6 text-gray-600" />
-            )}
-          </button>
-        </div>
-
         <div className="space-y-4">
           <Button
             onClick={handleSpotifyLogin}
@@ -112,14 +98,25 @@ function LoginPage() {
           </Button>
         </div>
 
-        {/* Footer Links */}
-        <div className="flex justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
+        {/* Footer with Links and Theme Toggle */}
+        <div className="flex items-center justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
           <a href="https://playlifts.com/privacy-policy" className="hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Privacy Policy
           </a>
           <a href="https://playlifts.com/terms" className="hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Terms of Service
           </a>
+          <button
+            aria-label="Toggle theme"
+            onClick={() => setDark((d) => !d)}
+            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-sm"
+          >
+            {dark ? (
+              <SunIcon className="w-4 h-4 text-yellow-400" />
+            ) : (
+              <MoonIcon className="w-4 h-4 text-gray-600" />
+            )}
+          </button>
         </div>
       </motion.div>
     </div>
